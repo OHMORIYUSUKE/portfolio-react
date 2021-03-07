@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import Skill from './components/Skill';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
+import Blogs2 from './components/Blogs2';
 
 class App extends React.Component{
 
@@ -18,6 +19,7 @@ class App extends React.Component{
         <About />
         <Skill />
         <Blogs />
+        <Blogs2 />
         <Contact />
         <Footer />
       </div>
