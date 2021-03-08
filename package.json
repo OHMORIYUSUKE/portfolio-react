@@ -1,7 +1,7 @@
 {
   "name": "contentfultest",
   "version": "0.1.0",
-  "homepage": "https://elsammit.github.io/portfolio-react",
+  "homepage": "https://ohmoriyusuke.github.io/portfolio-react",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",

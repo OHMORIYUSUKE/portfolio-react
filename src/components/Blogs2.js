@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 // http://utan.php.xdomain.jp/blog/rss.xml
 /*RSSParserのインスタンス生成*/
 const RssParser = require('rss-parser');
-const url = "http://utan.php.xdomain.jp/blog/rss.xml"
+const url = "//utan.php.xdomain.jp/blog/rss.xml"
 const rssParser = new RssParser();
 
 const titleStyle ={
