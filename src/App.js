@@ -8,7 +8,8 @@ import Footer from './components/Footer'
 import Skill from './components/Skill';
 import Contact from './components/Contact';
 import Blogs from './components/Blogs';
-import Blogs2 from './components/Blogs2';
+
+//デプロイ 参考 https://bagelee.com/programming/react/react-smart-speaker-8/
 
 class App extends React.Component{
 
@@ -19,7 +20,6 @@ class App extends React.Component{
         <About />
         <Skill />
         <Blogs />
-        <Blogs2 />
         <Contact />
         <Footer />
       </div>

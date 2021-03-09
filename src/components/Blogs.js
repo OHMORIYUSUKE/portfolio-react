@@ -6,9 +6,12 @@ import PropTypes from 'prop-types';
 
 // https://uu-tan.hatenablog.jp/rss
 // http://utan.php.xdomain.jp/blog/rss.xml
+
+const blogsNum = 7; //ブログ記事の表示件数
+
 /*RSSParserのインスタンス生成*/
 const RssParser = require('rss-parser');
-const url = "https://uu-tan.hatenablog.jp/rss"
+const url = "http://utan.php.xdomain.jp/blog/getRSS.php"
 const rssParser = new RssParser();
 
 const titleStyle ={
@@ -19,6 +22,7 @@ const titleStyle ={
 const style = {
     textAlign: "center",
     fontSize: "20px",
+    color: "white",
 }
 
 class Blogs extends Component {
@@ -44,10 +48,10 @@ class Blogs extends Component {
         console.error('Get Failed', error);
       })
   }
-  render(props) {
-    const classes = this.props.classes;
+  render() {
     /*表示するコンテンツの形に合わせてstateの中身を書きだす(mapで拡張forループみたいに使う)*/
-    const contents = this.state.contents.map(content => {
+    /*slice(0,5)//mapの回数を制限する*/
+    const contents = this.state.contents.slice(0,blogsNum).map(content => {
       return <div>
         <p style={style}><a href={content.link}>{content.title} | {content.pubDate}</a></p>
       </div>
@@ -55,6 +59,7 @@ class Blogs extends Component {
     return (
       <div>
         <h1 style={titleStyle}>Blog</h1>
+        <p　style={style}>最新{blogsNum}件</p>
         <div>
         {contents}
         </div>
